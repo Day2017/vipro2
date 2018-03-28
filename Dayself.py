@@ -15,7 +15,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 cl =LINETCR.LINE()
 #cl.login(qr=True)
-cl.login(token='ErRYGMSZgjmSuPPc2dp4.lvwP3VdAqia8dy2v3/cY1a.x6abU+CLxFS6n2x6WxtYAk/U3j0fhmNPqMfXfanq+Qs=')
+cl.login(token='EruyPfsqcHtD0fALT6u0.fSHXaR7SoHySKjJhzvgwma.0KXNfioF6NvyGmF5h/t8VRWPoIL9THMj7DLK4Pri6r0=')
 cl.loginResult()
 
 #ki = LINETCR.LINE()
@@ -85,7 +85,7 @@ helpMessage ="""||=====คำสั่งทั่วไป=====||
 ➣ [Info grup]
 ➣ [Gift-Allgift]
 ➣ [Clear grup
-➣️ [Reject]☆ลบรัน
+➣️ [Reject]
 ➣ [Aslogin 
 ➣ [Mic:]
 ➣ [Nuke]
@@ -115,7 +115,7 @@ helpMessage ="""||=====คำสั่งทั่วไป=====||
 ➣ [Add on/off] 
 ➣ [Join on/off]
 ➣ [Contact on/off]
-➣ [Leave on/off] กันรันแชท เปิด/ปิด
+➣ [Leave on/off]
 ➣ [Share on/off]
 ➣ [Getname @]		   
 ➣ [Getbio @]
@@ -185,8 +185,8 @@ mid = cl.getProfile().mid
 #ki5mid = ki5.getProfile().mid
 bot1 = cl.getProfile().mid
 Bots = [mid]
-admsa = "u2d55a9def0da40803c0d8d95dfe0b2d4"
-admin = "u2d55a9def0da40803c0d8d95dfe0b2d4"
+admsa = "u16c87102beec3a162c9098c765519630"
+admin = "u16c87102beec3a162c9098c765519630"
 
 wait = {
     'contact':False,
@@ -306,7 +306,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u2d55a9def0da40803c0d8d95dfe0b2d4":
+                if msg.from_ == "u16c87102beec3a162c9098c765519630":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -320,19 +320,19 @@ def bot(op):
                 if wait["leaveRoom"] == True:
                     cl.leaveRoom(msg.to)
 # ----------------- NOTIFED MEMBER JOIN GROUP
-        if op.type == 17:
-          #if wait["sambut"] == True:
-            if op.param2 in admin:
-                return
-            ginfo = cl.getGroup(op.param1)
-            contact = cl.getContact(op.param2)
-            image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            cl.sendText(op.param1,"(\__/) ||\n(•ㅅ•) ||\n/ 　 づ\nʕ•̫͡•ʔ•̫͡•ʔ █▬█ █•̫͡•ʕ•̫͡•ʔ \n" + cl.getContact(op.param2).displayName + "\nยินต้อนรับสู่🔜\n " + str(ginfo.name) + "\n🍂มาใหม่แนะนำตัวด้วยนะ🍂\n" + "\nʕ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ")
-            cl.sendImageWithURL(op.param1,image)
-            print "ada orang masuk grup"
-            if msg.contentType == 16:
-                url = msg.contentMetadata["postEndUrl"]
-                cl.like(url[25:58], url[66:], likeType=1001)
+#        if op.type == 17:
+ #         #if wait["sambut"] == True:
+  #          if op.param2 in admin:
+   #             return
+    #        ginfo = cl.getGroup(op.param1)
+     #       contact = cl.getContact(op.param2)
+      #      image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+       #     cl.sendText(op.param1,"(\__/) ||\n(•ㅅ•) ||\n/ 　 づ\nʕ•̫͡•ʔ•̫͡•ʔ █▬█ █•̫͡•ʕ•̫͡•ʔ \n" + cl.getContact(op.param2).displayName + "\nยินต้อนรับสู่🔜\n " + str(ginfo.name) + "\n🍂มาใหม่แนะนำตัวด้วยนะ🍂\n" + "\nʕ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ")
+        #    cl.sendImageWithURL(op.param1,image)
+         #   print "ada orang masuk grup"
+          #  if msg.contentType == 16:
+           #     url = msg.contentMetadata["postEndUrl"]
+            #    cl.like(url[25:58], url[66:], likeType=1001)
 # ----------------- NOTIFED MEMBER OUT GROUP
 #        if op.type == 15:
 #            if op.param2 in bot1:
@@ -350,15 +350,15 @@ def bot(op):
        #         url = msg.contentMetadata["postEndUrl"]
         #        cl.like(url[25:58], url[66:], likeType=1001)
 # ----------------- NOTIFED MEMBER JOIN GROUP
-        if op.type == 17:
-          #if wait["sambut"] == True:
-            if op.param2 in admin:
-                return
-            ginfo = cl.getGroup(op.param1)
-            contact = cl.getContact(op.param2)
-            image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            cl.sendImageWithURL(op.param1,image)
-            print "ada orang masuk grup"
+#        if op.type == 17:
+ #         #if wait["sambut"] == True:
+  #          if op.param2 in admin:
+   #             return
+    #        ginfo = cl.getGroup(op.param1)
+     #       contact = cl.getContact(op.param2)
+      #      image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+       #     cl.sendImageWithURL(op.param1,image)
+        #    print "ada orang masuk grup"
         if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
@@ -1875,7 +1875,7 @@ def bot(op):
 #-----------------------------------------------------------)
             elif msg.text in ["Help2","Key","KEY"]:
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helpMessage2)
+                    cl.sendText(msg.to,help2Message)
                 else:
                     cl.sendText(msg.to,helpt)
 #----------------------ADMIN COMMAND------------------------------#
@@ -1893,7 +1893,7 @@ def bot(op):
                         except:
                             cl.sendText(msg.to,"Error")
                     
-            elif msg.text in ["Mention","Tagall"]:
+            elif msg.text in ["Mention","Tagall","/###"]:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
                 for j in xrange(k+1):
