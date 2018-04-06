@@ -18,7 +18,7 @@ class Channel:
     http_query_path = "/S4"
     channel_query_path = "/CH4"
 
-    UA = "Line/1.4.17"
+    UA = "Line/8.4.1"
     LA = "CHROMEOS\t7.18.0\tChrome_OS\t1"
     
 
